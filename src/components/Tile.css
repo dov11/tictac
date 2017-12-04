@@ -1,0 +1,12 @@
+.tile {
+  width: 3em;
+  height: 3em;
+  border: 0.2em solid black;
+}
+
+.Player1 {
+  background-color: red;
+}
+.Player2 {
+  background-color: green;
+}
