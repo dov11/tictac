@@ -2,6 +2,8 @@ import React, {PureComponent} from 'react';
 import Tile from './Tile'
 import './Gamegrid.css'
 import { connect } from 'react-redux';
+import Restart from './Restart';
+
 
 
 class GameGrid extends PureComponent {
@@ -12,6 +14,7 @@ class GameGrid extends PureComponent {
     return (
       <div className="gamegrid">
         {this.props.tiles.map(this.renderTile)}
+        <Restart state={{}}/>
       </div>
     );
   }

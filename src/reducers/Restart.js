@@ -1,14 +1,13 @@
 import { CLICK_TILE } from '../actions/tile'
 import { RESTART } from '../actions/restart'
 
-const player = true
 
-export default (state=player, {type, payload} = {}) => {
+export default (state={}, {type, payload} = {}) => {
   switch(type) {
     case CLICK_TILE :
-      return !state
+      return state
     case RESTART :
-      return payload.PlayerTurn
+      return state
 
     default :
       return state

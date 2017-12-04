@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 class PlayerTurn extends PureComponent {
   render() {
     return (
-      <div className={this.props.player + ""}>
+      <div className={(this.props.player)? "Player1":"Player2"}>
         {(this.props.player)? "Player1":"Player2"} turn
       </div>
     );

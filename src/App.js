@@ -13,8 +13,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-        </header>
         <div className="App-intro">
           <PlayerTurn player={player} />
           <GameGrid tiles={tiles} />
