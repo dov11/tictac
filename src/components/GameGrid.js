@@ -11,7 +11,6 @@ class GameGrid extends PureComponent {
     return <Tile key={tile.id} {...tile} />
   }
   render() {
-    console.log(this.props)
     return (
       <div className="gamegrid">
         {this.props.tiles.map(this.renderTile)}

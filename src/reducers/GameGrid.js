@@ -20,7 +20,7 @@ export default (state={tiles: tiles, winner: ""}, {type, payload} = {}) => {
       })
       function rows(k,l,m){return newGrid[k].player+newGrid[l].player+newGrid[m].player}
       const rowsArray = [rows(0,1,2), rows(3,4,5), rows(6,7,8),
-                    rows(0,3,6), rows(1,4,7), rows(3,5,8),
+                    rows(0,3,6), rows(1,4,7), rows(2,5,8),
                   rows(0,4,8), rows(2,4,6)]
       const p1Won = rowsArray.includes('Player1Player1Player1')
       const p2Won = rowsArray.includes('Player2Player2Player2')
