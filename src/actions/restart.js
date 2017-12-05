@@ -6,6 +6,6 @@ const tiles = "123456789"
 export default () => {
   return {
     type: RESTART,
-    payload: {GameGrid: tiles, PlayerTurn: true}
+    payload: {GameGrid: {tiles: tiles, winner: ""}, PlayerTurn: true}
   }
 }

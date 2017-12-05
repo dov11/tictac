@@ -8,9 +8,12 @@ class Restart extends PureComponent {
   }
   render() {
     return (
+      <div>
+        {this.props.winner !== "" && <h3>{this.props.winner} won</h3>}
       <button onClick={this.restartClick.bind(this)}>
       Restart
       </button>
+    </div>
     );
   }
 }

@@ -11,16 +11,18 @@ class GameGrid extends PureComponent {
     return <Tile key={tile.id} {...tile} />
   }
   render() {
+    console.log(this.props)
     return (
       <div className="gamegrid">
         {this.props.tiles.map(this.renderTile)}
-        <Restart state={{}}/>
+        <Restart winner={this.props.winner}/>
       </div>
     );
   }
 }
 const mapStateToProps = (state) => {
-  return {tiles: state.GameGrid}
+  return {tiles: state.GameGrid.tiles,
+  winner: state.GameGrid.winner}
 }
 export default connect(mapStateToProps)(GameGrid)
 // export default GameGrid;
