@@ -8,7 +8,7 @@ const tiles = "123456789"
 export default (state={tiles: tiles, winner: ""}, {type, payload} = {}) => {
   switch (type) {
     case CLICK_TILE :
-      const newGrid = state.tiles.map(tile=>{
+      let newGrid = state.tiles.map(tile=>{
         if(tile.id===payload.tile.id) {
           const actedPlayer = payload.PlayerTurn ? "Player1" : "Player2"
           return {
@@ -30,6 +30,8 @@ export default (state={tiles: tiles, winner: ""}, {type, payload} = {}) => {
       } else if (p2Won) {
         winner = "Player2"
       }
+      if (p1Won || p2Won) {
+        newGrid = newGrid.map(tile=>{return{...tile, clicked:true}})}
       return {tiles: newGrid, winner: winner}
     case RESTART :
       return payload.GameGrid
